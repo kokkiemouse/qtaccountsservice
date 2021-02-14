@@ -32,7 +32,7 @@ qt5_add_dbus_interface(SOURCES
                        ${CMAKE_CURRENT_SOURCE_DIR}/org.freedesktop.Accounts.xml
                        accounts_interface)
 
-add_library(QtAccountsService SHARED ${SOURCES})
+	       add_library(QtAccountsService STATIC ${SOURCES})
 generate_export_header(QtAccountsService EXPORT_FILE_NAME qtaccountsservice/qtaccountsservice_export.h)
 add_library(QtAccountsService::QtAccountsService ALIAS QtAccountsService)
 
